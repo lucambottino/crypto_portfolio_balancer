@@ -5,12 +5,10 @@
 import os
 import sys
 import time
-import config
 import threading
 import math
 import logging
 import logging.handlers
-
 
 # Define Custom imports
 from Database import Database
@@ -276,6 +274,7 @@ class Trading():
                         print('Stop-loss, sold')
                         return True
                     else:
+                        sell_id = sello['orderId']
                         self.cancel(symbol, sell_id)
                         return False
             else:

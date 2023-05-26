@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: UTF-8 -*-
-# @yasinkuyu
 
 import sys
 import argparse
 
 sys.path.insert(0, './app')
 
-from Trading import Trading
+from app import Trading
 
 if __name__ == '__main__':
 
@@ -42,7 +41,9 @@ if __name__ == '__main__':
     parser.add_argument('--commision', type=str, help='Type of commission, TOKEN/BNB (default BNB)', default='BNB')
 
     option = parser.parse_args()
-
+    print(type(option))
+    print(option)
+    
     # Get start
     t = Trading(option)
     t.run()

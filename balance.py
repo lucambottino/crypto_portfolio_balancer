@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: UTF-8 -*-
-# @yasinkuyu
 
 import sys
 
 sys.path.insert(0, './app')
 
 import time
-import config
+import config as config
 from datetime import timedelta, datetime
 from BinanceAPI import BinanceAPI
 
@@ -76,10 +75,10 @@ class Binance:
                     print('---.--%% profit : %s (No bid/ask info retrieved)' % (coin['symbol']))
 
     def market_value(self, symbol, kline_size, dateS, dateF="" ):                 
-        dateS=datetime.strptime(dateS, "%d/%m/%Y %H:%M:%S")
+        dateS=datetime.strptime(dateS, "%Y/%m/%d %H:%M:%S")
         
         if dateF!="":
-            dateF=datetime.strptime(dateF, "%d/%m/%Y %H:%M:%S")
+            dateF=datetime.strptime(dateF, "%Y/%m/%d %H:%M:%S")
         else:
             dateF=dateS + timedelta(seconds=59)
 
@@ -91,7 +90,7 @@ class Binance:
                 print('[%s] Open: %s High: %s Low: %s Close: %s' % (datetime.fromtimestamp(kline[0]/1000), kline[1], kline[2], kline[3], kline[4]))
 
         return
-    
+
 try:
 
     while True:
@@ -168,6 +167,7 @@ try:
         else:
             print('Option not reconigzed')
 
-
 except Exception as e:
     print('Exception: %s' % e)
+
+
