@@ -1,6 +1,3 @@
-# -*- coding: UTF-8 -*-
-# @yasinkuyu
-
 # Define Python imports
 import os
 import sys

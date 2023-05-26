@@ -1,11 +1,9 @@
-# -*- coding: UTF-8 -*-
-# @yasinkuyu
 import config 
 
 from BinanceAPI import BinanceAPI
 from Messages import Messages
 
-# Define Custom import vars
+
 client = BinanceAPI(config.api_key, config.api_secret)
 
 class Orders():

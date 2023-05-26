@@ -1,6 +1,3 @@
-# -*- coding: UTF-8 -*-
-# @yasinkuyu
-
 # TODO 
 class analyze():
     

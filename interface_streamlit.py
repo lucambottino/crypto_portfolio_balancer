@@ -14,9 +14,8 @@ from datetime import date
 import streamlit as st
 
 
-#df_ticker = pd.DataFrame.from_dict(cg.get_coins_list())
 df_ticker = pd.read_csv('tickers.csv')
-#df_ticker.to_csv("tickers.csv")
+
 
 def get_coin_prices(coin_list):
     frames = []
